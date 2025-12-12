@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Motorcycle Parts Shop</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Reset */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fafafa;
+  color: #222;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  background-color: #222;
+  color: #fff;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://www.thunderbike.com/wp-content/uploads/2018/08/gp-style-1.jpg') no-repeat center center/cover;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  background-color: #ff6600;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #e65c00;
+}
+
+/* Products Section */
+.products-section {
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1.8rem;
+  color: #222;
+  font-weight: 700;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.btn-secondary {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #e65c00;
+}
+
+/* About Section */
+.about-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Contact Section */
+.contact-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.4rem;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #ff6600;
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+    @media (max-width: 600px) {
+      .hero-content h2 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo">MotoParts</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Parts</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h2>Quality Motorcycle Parts for Every Rider</h2>
+      <p>Your trusted source for high-performance and reliable motorcycle components.</p>
+      <a href="#products" class="btn-primary">Shop Now</a>
+    </div>
+  </section>
+
+  <section id="products" class="products-section container">
+    <h2 class="section-title">Featured Motorcycle Parts</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        <img src="https://cdn.shopify.com/s/files/1/0084/7006/9329/products/HB89Clear_ArrowOrange_720x@2x.jpg?v=1582855556" alt="Motorcycle Helmet" />
+        <h3>Motorcycle Helmet</h3>
+        <p>Safety first with our aerodynamic helmets.</p>
+        <button onclick="addToCart('Motorcycle Helmet')" class="btn-secondary">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.pinimg.com/originals/90/22/be/9022be012eabdb7b464c96eec5a134af.jpg" alt="Brake Disc" />
+        <h3>Brake Disc</h3>
+        <p>High-quality brake discs for precise stopping power.</p>
+        <button onclick="addToCart('Brake Disc')" class="btn-secondary">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://i.ebayimg.com/images/g/Q~oAAOSwXfZlxz26/s-l1600.jpg" alt="Chain and Sprocket" />
+        <h3>Chain & Sprocket</h3>
+        <p>Durable chain and sprocket sets for smooth rides.</p>
+        <button onclick="addToCart('Chain & Sprocket')" class="btn-secondary">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://ph-test-11.slatic.net/p/3c3c4ba341b40baf25089e9efa027d23.jpg" alt="Exhaust Pipe" />
+        <h3>Exhaust Pipe</h3>
+        <p>Performance exhaust pipes that boost your bike’s sound and power.</p>
+        <button onclick="addToCart('Exhaust Pipe')" class="btn-secondary">Add to Cart</button>
+      </div>
+
+       <div class="product-card">
+        <img src="https://i.ebayimg.com/images/g/Q~oAAOSwXfZlxz26/s-l1600.jpg" alt="Chain & Sprocket" />
+        <h3>Chain & Sprocket</h3>
+        <p>Durable chain and sprocket sets for smooth rides.</p>
+        <button onclick="addToCart('Chain & Sprocket')" class="btn-secondary">Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://down-ph.img.susercontent.com/file/ph-11134207-7r98p-lpdmx6q9l5nt68" alt="Flat set & Set cover" />
+        <h3>Flat set & Set cover</h3>
+        <p>smooth seat and comfortable.</p>
+        <button onclick="addToCart('Flat set & Set covert')" class="btn-secondary">Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="contact-section container">
+    <h2 class="section-title">Contact Us</h2>
+    <form id="contact-form" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Your email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Write your message..." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-primary">Send Message</button>
+    </form>
+  </section>
+
+  <section id="about" class="about-section container">
+    <h2 class="section-title">About MotoParts</h2>
+    <p>
+      MotoParts is dedicated to providing riders with the best motorcycle parts in the industry. Whether you’re a casual rider or a professional, we have the components you need to keep your bike running smoothly and safely.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 MotoParts. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
